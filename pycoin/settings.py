@@ -119,9 +119,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'common', 'static'), # BASE_DIR, app name, static folder
+    #os.path.join(BASE_DIR, 'common', 'static'), # BASE_DIR, app name, static folder
+    os.path.join(BASE_DIR, 'static'),
 ] # shows where your static files are
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # Reference : https://zu-techlog.tistory.com/11
 
 # Default primary key field type

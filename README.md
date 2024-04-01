@@ -7,12 +7,12 @@ PyCoin is for making your own history for buying and sells coins
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Enviroment
-
-Django 5.0.3
-
+* Django 5.0.3
 ```
-Give examples
+pip install Django==5.0.3
 ```
+* Python 3.11.5
+
 
 ### Installing
 

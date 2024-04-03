@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 from pathlib import Path
 import os
 
+# {App name}.{Model name}
+AUTH_USER_MODEL = 'users.User'
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -31,14 +34,18 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+# When you face an error to makemigraions and migrate 
+# try #'django.contrib.admin', and #path('admin/', admin.site.urls), in urls.py
+# and then makemigrations, migrate again
 INSTALLED_APPS = [
+    'users',
+    'common',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'common',
 ]
 
 MIDDLEWARE = [
@@ -129,3 +136,5 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = "home"

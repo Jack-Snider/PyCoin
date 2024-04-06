@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 # Create your views here.
 def index(request):
@@ -11,6 +11,10 @@ def index(request):
 
     print(f'user : {user}')
     print(f'is_authenticated : {is_authenticated}')
+
+    # if user is not logged in, redirect the URL to /user/login
+    if not is_authenticated:
+        return redirect("/users/login")
 
     # When you write URL address for html file
     # You have to start from right under the templates folder

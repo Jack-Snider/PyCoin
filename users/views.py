@@ -17,7 +17,7 @@ def login_view(request):
             user = authenticate(username = username, password = password)
             if user:
                 login(request, user)
-                return redirect("")
+                return redirect("/")
             else:
                 print("LOGIN FAIL")
         context = {"form" : form}

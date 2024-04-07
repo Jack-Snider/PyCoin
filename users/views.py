@@ -19,7 +19,7 @@ def login_view(request):
                 login(request, user)
                 return redirect("/")
             else:
-                print("LOGIN FAIL")
+                form.add_error(None, 'Given ID or Password is not valid.')
         context = {"form" : form}
         return render(request, "users/login.html", context)
     else:

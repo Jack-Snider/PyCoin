@@ -3,7 +3,7 @@ from django import forms
 class LoginForm(forms.Form):
 
     username = forms.CharField(min_length = 3)
-    password = forms.CharField(min_length = 4)
+    password = forms.CharField(min_length = 4, widget = forms.PasswordInput)
 
     # To add CSS style on each field
     widget = {
@@ -25,3 +25,11 @@ class LoginForm(forms.Form):
             }
         )
     }
+
+
+class SignupForm(forms.Form):
+    username = forms.CharField()
+    password1 = forms.CharField(widget = forms.PasswordInput)
+    password2 = forms.CharField(widget = forms.PasswordInput)
+    profile_image = forms.ImageField()
+    short_description = forms.CharField()

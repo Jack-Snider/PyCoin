@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from users.forms import LoginForm
+from users.forms import LoginForm, SignupForm
 from django.contrib.auth import authenticate, login, logout
 
 # Choi
@@ -34,4 +34,9 @@ def logout_view(request):
     
 
 def signup(request):
-    return render(request, "users/signup.html")
+
+    # Create SignupForm instance
+    form = SignupForm()
+    context = {"form" : form}
+
+    return render(request, "users/signup.html", context)

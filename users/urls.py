@@ -2,6 +2,7 @@ from django.urls import path
 from .views import * # Get all views from user > views
 from django.contrib.auth import views as auth_views
 
+# users app
 app_name = "users"
 urlpatterns = [
     path('login/', login_view),

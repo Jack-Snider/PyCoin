@@ -23,6 +23,7 @@
             <div class="container">
                 <div class="signup-content">
                     <form method="POST" id="signup-form" class="signup-form">
+                        {% csrf_token %}
                         <h2 class="form-title">Create account</h2>
                         <div class="form-group">
                             <input type="text" class="form-input" name="name" id="name" placeholder="Your Name"/>
@@ -55,7 +56,7 @@
     </div>
 
     <!-- JS -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="{% static 'signup/vendor/jquery/jquery.min.js'"%}></script>
+    <script src="{% static 'signup/js/main.js' %}"></script>
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>

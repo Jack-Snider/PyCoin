@@ -22,6 +22,7 @@
             <!-- <img src="images/signup-bg.jpg" alt=""> -->
             <div class="container">
                 <div class="signup-content">
+                    <!-- form start -->
                     <form method="POST" id="signup-form" class="signup-form">
                         {% csrf_token %}
                         <h2 class="form-title">Create account</h2>
@@ -46,6 +47,7 @@
                             <input type="submit" name="submit" id="submit" class="form-submit" value="Sign up"/>
                         </div>
                     </form>
+                    <!-- form end -->
                     <p class="loginhere">
                         Have already an account ? <a href="#" class="loginhere-link">Login here</a>
                     </p>

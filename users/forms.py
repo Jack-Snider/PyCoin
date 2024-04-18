@@ -33,3 +33,16 @@ class SignupForm(forms.Form):
     password2 = forms.CharField(widget = forms.PasswordInput)
     profile_image = forms.ImageField()
     short_description = forms.CharField()
+    
+    # To add CSS style on each field
+    widget = {
+          'username' : forms.TextInput(
+            attrs = {
+                'id' : 'name',
+                'class' : 'form-input',
+                'type' : 'text' ,
+                'name' : 'name',
+                'placeholder' : 'Your Name'
+            }
+        ),
+    }

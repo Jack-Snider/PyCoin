@@ -34,7 +34,7 @@ class SignupForm(forms.Form):
     profile_image = forms.ImageField()
     short_description = forms.CharField()
     
-    # To add CSS style on each field!
+    # To add CSS style on each field!!
     widget = {
           'username' : forms.TextInput(
             attrs = {
